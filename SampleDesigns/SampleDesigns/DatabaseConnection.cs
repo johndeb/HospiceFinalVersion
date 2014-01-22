@@ -115,6 +115,7 @@ namespace SampleDesigns
                 return false;
             }
         }
+
         public void Insert(string id, string name, string surname, string password, string username, string email, string contactNo, int userRole)
         {
             if(connection.State == System.Data.ConnectionState.Open)
@@ -122,8 +123,14 @@ namespace SampleDesigns
                 string InsertQuery = "INSERT INTO login (Username,Password,IDCard,Name,Surname,Email,ContactNo,RoleID) VALUES ('"+username+"','"+password+"','"+id+"','"+name+"','"+surname+"','"+email+"','"+contactNo+"',"+userRole+")";
                 MySqlCommand command = new MySqlCommand(InsertQuery, connection);
                 command.ExecuteNonQuery();
-                
             }
+        }
+
+        public List<Account> select()
+        {
+            List<Account> accounts = new List<Account>();
+
+            return accounts;
         }
     }
 }
