@@ -122,13 +122,8 @@ namespace SampleDesigns
                 string InsertQuery = "INSERT INTO login (Username,Password,IDCard,Name,Surname,Email,ContactNo,RoleID) VALUES ('"+username+"','"+password+"','"+id+"','"+name+"','"+surname+"','"+email+"','"+contactNo+"',"+userRole+")";
                 MySqlCommand command = new MySqlCommand(InsertQuery, connection);
                 command.ExecuteNonQuery();
-                //insert
+                
             }
-        }
-
-        public void TestMethod()
-        {
-
         }
     }
 }
