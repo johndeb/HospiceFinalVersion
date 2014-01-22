@@ -124,5 +124,10 @@ namespace SampleDesigns
                 command.ExecuteNonQuery();
             }
         }
+
+        public void TestMethod()
+        {
+
+        }
     }
 }
